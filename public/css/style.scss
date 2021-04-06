@@ -1,0 +1,65 @@
+@import 'base';
+
+header {
+  width: 100%;
+  height: 80px;
+
+  padding: 0 50px;
+  background: var(--color-pink);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  div.logo {
+    display: flex;
+    align-items: center;
+
+    font-family: 'Dela Gothic One', sans-serif;
+
+    img {
+      width: 50px;
+    }
+
+    h1 {
+      margin-left: 15px;
+      color: rgb(50, 50, 50);
+
+      span {
+        color: var(--text-title);
+      }
+    }
+  }
+
+  a {
+    min-width: 210px;
+
+    padding: 5px 15px;
+    
+    background: #fff;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color-pink);
+    
+    text-decoration: none;
+    transition: .2s;
+
+    cursor: pointer;
+
+    &:hover {
+      opacity: .8;
+      transform: scale(1.1);
+      box-shadow: 0 0 10px #fff;
+    }
+
+    img {
+      width: 30px;
+    }
+  }
+}
