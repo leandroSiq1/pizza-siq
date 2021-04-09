@@ -6,6 +6,7 @@ header {
 
   padding: 0 50px;
   background: var(--color-pink);
+  box-shadow: 0 0 20px var(--color-pink-light);
 
   display: flex;
   align-items: center;
@@ -60,6 +61,162 @@ header {
 
     img {
       width: 30px;
+    }
+  }
+}
+
+div.menu {
+  width: 100%;
+  height: 80px;
+
+  border-bottom: 1px solid lightgray;
+
+  position: relative;
+
+  .box-buttons {
+    width: 300px;
+
+    display: flex;
+    align-items: center;
+    gap: 1px;
+
+    position: absolute;
+    top: calc(100% - 40px);
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    button {
+      width: 155px;
+      height: 40px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+
+      padding: 0 10px;
+
+      background: none;
+      border: none;
+      outline: none;
+
+      font-size: 17px;
+      font-weight: bold;
+
+      transition: .2s;
+      cursor: pointer;
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
+
+      &:hover {
+        background: #f0ebeb;
+        transform: scale(1.1);
+      }
+    }
+
+    button.active {
+      background: #f0ebeb;
+      border-bottom: 2px solid var(--color-pink);
+    }
+  }
+}
+
+section.collection-pizzas {
+  width: 90%;
+
+  margin: auto;
+  padding: 50px 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+  div.item {
+    background: #fff;
+    box-shadow: 0 0 10px rgb(235, 226, 226);
+    border-radius: 5px;
+
+    div.container-item {
+      padding: 20px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+
+      div.header-item {
+        display: flex;
+        gap: 20px;
+
+        img {
+          width: 35px;
+        }
+
+        div.title {     
+
+          small {
+            position: relative;
+            top: -5px;
+            font-weight: bold;
+            color: var(--text-light);
+          }
+        }
+      }
+
+      img.img-item {
+        width: 100%;
+        max-height: 260px;
+        
+        object-fit: cover;
+        border-radius: 10px;
+
+        transition: .3s;
+      }
+      
+      div.footer-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+          padding-bottom: 8px;
+          font-weight: 400;
+        }
+
+        img {
+          width: 23px;
+        }
+
+        button {
+          width: 220px;
+          height: 40px;
+
+          transition: .2s;
+          cursor: pointer;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+
+          font-size: 15px;
+          font-weight: bold;
+
+          background: var(--text-title);
+          border: 1px solid lightgray;
+          border-radius: 5px;
+          outline: none;
+          
+          &:hover {
+            transform: scale(1.1);
+            opacity: .8;
+          }
+        }
+      }
     }
   }
 }
